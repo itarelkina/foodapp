@@ -1,5 +1,5 @@
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
 from django.urls import reverse
 
 
@@ -18,4 +18,3 @@ class Item ( models.Model ):
     # delete this afterwards
     def get_absolute_url(self):
         return reverse ( "food:detail", kwargs={ "pk": self.pk } )
-

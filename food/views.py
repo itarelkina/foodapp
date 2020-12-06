@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from food.models import Item
-from django.template import loader
-from food.forms import ItemForm
-from django.views.generic.list import ListView
+from django.shortcuts import render, redirect
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
+from django.views.generic.list import ListView
+
+from food.forms import ItemForm
+from food.models import Item
 
 
 # Create your views here.
@@ -87,4 +87,3 @@ def delete_item(request, id):
         return redirect ( 'food:index' )
 
     return render ( request, 'food/item-delete.html', { 'item': item } )
-
