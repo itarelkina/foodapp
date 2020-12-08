@@ -9,8 +9,8 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Welcome {username}, your account is activated.')
-            return redirect('food:index')
+            messages.success(request, f'Welcome {username}, you are login.')
+            return redirect('login')
     else:
         form = RegisterForm ()
     return render (request, "users/register.html",{'form':form})
