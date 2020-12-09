@@ -3,7 +3,6 @@ from django.shortcuts import render, redirect
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
-
 from food.forms import ItemForm
 from food.models import Item
 
